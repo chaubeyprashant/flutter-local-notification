@@ -28,7 +28,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Flutter Local Notifications")),
+      appBar: AppBar(title: const Text("Flutter Local Notifications")),
       body: Container(
         height: double.infinity,
         child: Center(
@@ -36,48 +36,48 @@ class _HomepageState extends State<Homepage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton.icon(
-                icon: Icon(Icons.notifications_outlined),
+                icon: const Icon(Icons.notifications_outlined),
                 onPressed: () {
                   LocalNotifications.showSimpleNotification(
                       title: "Simple Notification",
                       body: "This is a simple notification",
                       payload: "This is simple data");
                 },
-                label: Text("Simple Notification"),
+                label: const Text("Simple Notification"),
               ),
               ElevatedButton.icon(
-                icon: Icon(Icons.timer_outlined),
+                icon: const Icon(Icons.timer_outlined),
                 onPressed: () {
                   LocalNotifications.showPeriodicNotifications(
                       title: "Periodic Notification",
                       body: "This is a Periodic Notification",
                       payload: "This is periodic data");
                 },
-                label: Text("Periodic Notifications"),
+                label: const Text("Periodic Notifications"),
               ),
               ElevatedButton.icon(
-                icon: Icon(Icons.timer_outlined),
+                icon: const Icon(Icons.timer_outlined),
                 onPressed: () {
                   LocalNotifications.showScheduleNotification(
                       title: "Schedule Notification",
                       body: "This is a Schedule Notification",
                       payload: "This is schedule data");
                 },
-                label: Text("Schedule Notifications"),
+                label: const Text("Schedule Notifications"),
               ),
               // to close periodic notifications
               ElevatedButton.icon(
-                  icon: Icon(Icons.delete_outline),
+                  icon: const Icon(Icons.delete_outline),
                   onPressed: () {
                     LocalNotifications.cancel(1);
                   },
-                  label: Text("Close Periodic Notifcations")),
+                  label: const Text("Close Periodic Notifcations")),
               ElevatedButton.icon(
-                  icon: Icon(Icons.delete_forever_outlined),
+                  icon: const Icon(Icons.delete_forever_outlined),
                   onPressed: () {
                     LocalNotifications.cancelAll();
                   },
-                  label: Text("Cancel All Notifcations"))
+                  label: const Text("Cancel All Notifcations"))
             ],
           ),
         ),
